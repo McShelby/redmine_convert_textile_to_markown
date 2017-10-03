@@ -15,7 +15,7 @@ task :convert_textile_to_markdown => :environment do
     print the_class.name
     the_class.find_each do |model|
       attributes.each do |attribute|
-
+        print model.id
         textile = model[attribute]
         if textile != nil
           markdown = convert_textile_to_markdown(textile)
